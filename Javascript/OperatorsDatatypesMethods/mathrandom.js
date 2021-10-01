@@ -6,7 +6,7 @@ function randomNum(min, max) {
     return Math.floor(Math.random() * range) + min
 }
 
-randomNum(1, 10) //this would generate rando # bet 1-10, add your ranges as needed!
+randomNum(1, 10) //this would generate random # bet 1-10, add your ranges as needed!
 //You can put any 2  numbers  here
 //Math.random() returns a number between 0 and 1 inclusive on the low end (includes 0), but exclusive on the high end (only goes to 0.999etc).
 //the reason you add 1 is to make it inclusive of the 1 
