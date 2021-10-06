@@ -6,7 +6,7 @@ function greeter(inName) {
 
 
     if (newName === "Voldemort" || newName === "Sauron" || newName === "Humperdinck" || newName === "Moriarty" || newName === "Vader") {
-        console.log("Go, away!")
+        console.log("Go, away enemy!")
         process.exit()
 
     } else if (newName === "Bye!" || newName === "Bye") {
@@ -14,7 +14,7 @@ function greeter(inName) {
         process.exit();
 
     } else {
-        console.log("Hello, " + inName + "!")
+        console.log("Hello, " + inName + "my friend!")
     }
 }
 
