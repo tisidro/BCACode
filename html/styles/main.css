@@ -1,0 +1,112 @@
+/*-----Questions-------- */
+
+/* 
+How can I get rid of the space between Nav bar and Title bar?
+Is it better to use em inline if you want screen readers to pick up(instead of including in CSS)
+I tried to get the figcaption text to center using a css class, but when I used it on the other page it didn't work
+ */
+
+/* -----Multi-Colored Headline Text */
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.white {
+  color: white;
+}
+
+.background-nav {
+  background-color: green;
+}
+
+.title-font {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 50px;
+  font-weight: bold;
+  font-stretch: wider;
+  text-outline: 1px black solid;
+}
+/* -------Navigation------- */
+#nav-link {
+  text-decoration: none;
+}
+
+nav:hover {
+  background-color: olive;
+}
+
+nav {
+  padding: 10px;
+  margin: -10px;
+}
+
+button {
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button:last-of-type {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+/* ----Images------ */
+
+img {
+  padding-top: 20px;
+  padding-left: 20px;
+
+  padding-bottom: 20px;
+}
+
+.figure {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: small;
+  font-style: italic;
+  color: green;
+}
+
+/* ----Body and Body Elements--- */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: medium;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.background-main {
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
+  background-color: yellow;
+  padding: 80px;
+}
+
+h2 {
+  color: red;
+}
+
+h3 {
+  color: yellow;
+}
+
+.second-par {
+  padding-left: 170px;
+  padding-top: 30px;
+  padding-right: 170px;
+  padding-bottom: 80px;
+}

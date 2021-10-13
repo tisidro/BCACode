@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.box1 {
+  font-weight: bolder;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-grow: 3;
+}
+
+.textbx1 {
+  max-width: 300px;
+}
+
+.textbx2 {
+  max-width: 300px;
+}
+.textmain {
+  max-width: 600px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.div-header {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+}
+
+h2 {
+  flex-direction: row;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50;
+  font-weight: bold;
+  height: 40px;
+  width: 500px;
+  flex-grow: 1;
+}
+
+h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  height: 30px;
+  width: 250 px;
+}
+
+.img1 {
+  width: 100%;
+}
+
+.img2 {
+  width: 100%;
+}
+
+.footer {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bol;
+}

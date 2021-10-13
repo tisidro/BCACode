@@ -1,0 +1,37 @@
+header {
+  font-size: 70px;
+  font-weight: bolder;
+}
+
+img {
+  width: 200px;
+}
+
+.pic1 {
+  float: left;
+}
+
+.pic2 {
+  float: right;
+}
+
+.container1 {
+  float: left;
+  width: 300px;
+  padding: 70px;
+  margin-left: 300px;
+}
+
+.container2 {
+  float: right;
+  width: 300px;
+  padding: 70px;
+  margin-right: 300px;
+}
+.leftp {
+  display: inline-block;
+}
+
+.rightp {
+  display: inline-block;
+}

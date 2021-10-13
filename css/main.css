@@ -1,0 +1,25 @@
+.container {
+  display: inline-block;
+  width: 600px;
+  position: relative;
+  top: 20px;
+  /* pushes it down 20px */
+}
+
+.caption {
+  position: absolute;
+  bottom: 30px;
+  /* moves  paragraph contents up into the image in our case*/
+}
+
+h1 {
+  /* fixed lets you scroll with html */
+  position: fixed;
+  /* or can do position: sticky; and also add where you want it like top:0 this actually looks nicer */
+  z-index: 0;
+  background-color: antiquewhite;
+}
+
+/* .container:hover { 
+  display: none;
+}*/

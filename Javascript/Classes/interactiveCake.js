@@ -6,6 +6,7 @@ class Cake {
         this.decoration = decoration || "M&Ms";
 
     }
+    
     describe() {
         console.log(`It is a ${this.flavor} cake with ${this.icing} icing and decorated with ${this.decoration}`)
     }
