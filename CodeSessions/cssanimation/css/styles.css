@@ -1,0 +1,133 @@
+/* structure where everything lives */
+
+body {
+  margin: 0vw;
+}
+
+/*sets height width of animated gifs*/
+div:not(#h1-wrap) {
+  width: 15 vw;
+  height: 15vw; /*to be proportional to view window*/
+}
+
+main {
+  display: flex;
+  padding: 8vw; /*so it doesn't run into the title*/
+  justify-content: space-around; /*works on the main axis*/
+  width: 80vw;
+  height: auto;
+}
+
+h1 {
+  color: white;
+  font-family: 'Noto Sans Mono', monospace; /*came from googlefonts...means use this font if not avail use monospace*/
+  font-size: 3vw;
+  text-shadow: 2vh 2vw black; /*first 2 are vert and horiz dimensions of shadow*/
+}
+
+#h1-wrap {
+  text-align: center;
+  width: 35vw;
+  margin: auto;
+  padding: 1vh 5vw 2vh 5vw; /*top, left, bottom, right padding*/
+  background-color: aqua;
+  box-shadow: 0.5vw 1vh; /*controlling view width and height of box shadow*/
+  transition: all 0.5s ease; /*what, time, animation timing-accelerates*/
+  transition-property: width, background-color;
+}
+
+#h1-wrap:hover {
+  width: 40vw; /*original width was 35, this makes it pop out*/
+  background-color: greenyellow;
+  transition-property: width, background-color;
+  transition: all 0.5s ease;
+}
+
+@keyframes fade {
+  /*set up from 0-100% from start to end of animation*/
+  0% {
+    opacity: 1; /*full opacity when animation starts*/
+  }
+
+  100% {
+    opacity: 0; /*no opacity when animation ends*/
+  }
+}
+
+@keyframes fade-and-rotate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+}
+@keyframes square-to-circle-rotate-div {
+  0% {
+    border-radius: 0 0 0 0; /*don't change border, ew will change it later*/
+    background: red;
+    transform: rotate(0deg); /*nothing happens at zero */
+  }
+  25% {
+    border-radius: 50% 0 0 0;
+    background: yellow;
+    transform: rotate(45deg); /*rotates @ 45 deg */
+  }
+  75% {
+    border-radius: 50% 50 0 0;
+    background: red;
+    transform: rotate(135deg); /*rotates div by 135 deg */
+  }
+
+  100% {
+    border-radius: 50%; /*with only 1 unit of measurement, do this for all of them */
+    background: yellow;
+    transform: rotate(180deg); /*rotates div by 45 deg */
+  }
+}
+
+#fade-div {
+  background-color: red;
+  /*animation-name: fade; /*needs to match name you gave it on keyframes*/
+  animation-name: fade;
+  animation-duration: 4s;
+  /* duration of the animation from start to finish */
+  animation-delay: 1s;
+  /* delay the start of the animation */
+  animation-iteration-count: infinite;
+  /* how many times animation will run */
+
+  animation-timing-function: linear;
+  /* set speed of animation */
+  animation-direction: alternate;
+  /* control the direction of the animation loop --makes it go back and forth so it's alternating*/
+}
+
+#fade-and-rotate-div {
+  background-color: yellow;
+  animation-name: fade-and-rotate;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; /*go in slow, go out slow*/
+  animation-direction: alternate-reverse;
+}
+
+#square-to-circle-rotate-div {
+  animation: square-to-circle-rotate 2s 1s infinite
+    cubic-bezier(0.85, 0, 0.15, 1) alternate;
+}
+/* alternate is the direction, cubic bezier rhythm of the speed of the animation  - four points on the graph that you pass, tells it how to time the animation */
+
+@media screen and (max-width: 500px) /*when screen is at max of 500 px do the following*/ {
+  h1 {
+    font-size: 5vw;
+  }
+  /*make h1 font bigger so breaks into new line for mobile and smaller devices*/
+}
+
+#h1-wrap:hover {
+  display: none;
+  /*can't hover on a touch screen so you want to disable*/
+}

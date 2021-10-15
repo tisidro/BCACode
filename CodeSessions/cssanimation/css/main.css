@@ -1,0 +1,69 @@
+/* structure where everything lives */
+
+body {
+  margin: 0vw;
+}
+
+/*sets height width of animated gifs*/
+div:not(#h1-wrap) {
+  width: 15 vw;
+  height: 15vs; /*to be proportional to view window*/
+}
+
+main {
+  display: flex;
+  justify-content: space-around; /*works on the main axis*/
+  width: 80vw;
+  height: auto;
+}
+
+h1 {
+  color: white;
+  font-family: 'Noto Sans Mono', monospace; /*came from googlefonts...means use this font if not avail use monospace*/
+  font-size: 3vw;
+  text-shadow: 2vh 2vw black; /*first 2 are vert and horiz dimensions of shadow*/
+  transition: all 0.5s ease;
+}
+
+#h1-wrap {
+  text-align: center;
+  width: 35vw;
+  margin: auto;
+  padding: 1vh 5vw 2vh 5vw; /*top, left, bottom, right padding*/
+  background-color: aqua;
+  box-shadow: 0.5vw 1vh; /*controlling view width and height of box shadow*/
+  transition: all 0.5s ease; /*what, time, animation timing-accelerates*/
+  transition-property: width, background-color;
+}
+
+#h1-wrap:hover {
+  width: 40vw; /*original width was 35, this makes it pop out*/
+  background-color: greenyellow;
+  transition-property: width, background-color;
+}
+
+@keyframes fade {
+  /*set up from 0-100% from start to end of animation*/
+  0% {
+    opacity: 1; /*full opacity when animation starts*/
+  }
+
+  100% {
+    opacity: 0; /*no opacity when animation ends*/
+  }
+}
+#fade-div {
+  background-color: red;
+  /* name matches name @keyframes */
+  animation-name: fade;
+  /* duration of animation start to finish */
+  animation-duration: 4s;
+  /* delay the start of the animation */
+  animation-delay: 1s;
+  /* how many times the animation will run */
+  animation-iteration-count: infinite;
+  /* set the speed of the animation */
+  animation-timing-function: linear;
+  /* control the direction of the animation loop */
+  animation-direction: alternate;
+}
