@@ -1,0 +1,29 @@
+**if the user presses presto, they get an alert "change-0. If they press abra they get "cadabra". If there were any other button and they pressed it the code defaults to "shazam!"**
+
+<button type="button" id="presto">Presto...</button>
+<button type="button" id="abra">Abra...</button>
+<script>
+var prestoButton = document.getElementById('presto');
+var abraButton = document.getElementById('abra');
+var otherButton = document.getElementById('Shazam!');
+
+
+
+**Here event.target...whichever element triggered the event-whichever button)//like...event was click, target is whatever caused it (here either the presto or abra buttons, or a default button)**
+
+function sayMagicWord(event) {
+  if (event.target === prestoButton) {
+    alert('Change-o!');
+  } else if (event.target === abraButton) {
+    alert('Cadabra!');
+  } else {
+    alert('Shazam!');
+  }
+  console.log({event}); // for debugging
+}
+
+prestoButton.addEventListener('click', sayMagicWord)
+abraButton.addEventListener('click', sayMagicWord)
+otherButton.addEventListener('click', sayMagicWord)
+</script>
+
