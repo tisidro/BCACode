@@ -43,7 +43,7 @@ resetButton.addEventListener('click', evt => {
 
 //---timer function to do the counting!--//
 function timer () {
-  idForTimerProcess = setTimeout(ticker, 1000) //id for timer in this global variable (which was initially set to null)--setTimeOut will wait 1000 sec and then call ticker to generate the countdown
+  idForTimerProcess = setTimeout(ticker, 1000) //id for timer in this global variable (which was initially set to null)--setTimeOut will wait 1000 msec and then call ticker to generate the countdown
 
   function ticker () {
     //prints count to console console.log(count)

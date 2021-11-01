@@ -7,10 +7,4 @@ let form = document.getElementById('form')
 let string = document.location.hash.substring(1)
 
 console.log(string)
-
-form.addEventListener('submit', evt => {
-  let userInput = stringInput.value
-  console.log(userInput)
-  document.location = '/greeting.html#' + userInput
-  evt.preventDefault()
-})
+//code here to display the code from the index.js redirect
